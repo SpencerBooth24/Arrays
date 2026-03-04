@@ -24,6 +24,10 @@ public class Arrays {
         //System.out.println(nums[9]);
         displayArray();
         sumArray();
+        averageNum();
+        maxNum();
+        minNum();
+
     }
 
     public void displayArray(){
@@ -41,4 +45,13 @@ public class Arrays {
         System.out.println(total);
     }
 
+    public void averageNum(){
+        System.out.println("Average: "+ java.util.Arrays.stream(nums).average());
+    }
+    public void maxNum(){
+        System.out.println("Max: "+ java.util.Arrays.stream(nums).max());
+    }
+    public void minNum(){
+        System.out.println("Min: "+ java.util.Arrays.stream(nums).min());
+    }
 }
