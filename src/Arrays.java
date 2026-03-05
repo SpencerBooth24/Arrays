@@ -1,5 +1,6 @@
 public class Arrays {
     public int[] nums;
+    public Astronaut[] astros;
     public static void main(String[] args) {
         System.out.println("Welcome to Arrays");
         new Arrays();
@@ -8,9 +9,20 @@ public class Arrays {
     public Arrays(){
 
         nums= new int[10];
+
         for (int x= 0; x<nums.length;x++){
             nums[x]= (int)(Math.random()*999)+1;
         }
+
+        astros= new Astronaut[12];
+
+        for (int x=0; x<astros.length;x++){
+            astros[x].name= "phil"+x;
+            astros[x].eyes= (int)(Math.random()* astros.length);
+        }
+
+
+
         //nums[9]= 11;
         //nums[8]= 22;
         //nums[7]= 11;
@@ -27,6 +39,11 @@ public class Arrays {
         averageNum();
         maxNum();
         minNum();
+
+        Astronaut a1 = new Astronaut();
+        a1.printInfo();
+
+        System.out.println(astros[4]);
 
     }
 
